@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Bankorama</title>
-        <script src="js/jquery-2.1.3.js"></script>
+        <script src="js/jquery-1.11.2.js"></script>
         <script src="js/scripts.js"></script>
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -9,47 +9,34 @@
     <body>
         <div class='container'>
 
-            <h1>Welcome to James-Erica International Credit Union</h1>
+            <h1>James-Erica Supernatural Credit Union</h1>
             <div id="new-account" class='col-md-4'>
                 <form id="sign-up">
                     <h3> Sign up for a bank account:</h3>
-                    <input type="text" placeholder="name" pattern='.{4,20}' required>
-                    <input type="number" placeholder="deposit" required>
+                    <input id='account-name' type="text" placeholder="name" pattern='.{4,20}' required>
+                    <input id='account-bal' type="number" placeholder="deposit" required>
 
                 <button type="submit" class='btn btn-success'> Submit</button>
-            </div>
                 </form>
+            </div>
 
-
+        <div id="account-hide">
             <div id="deposit-withdraw" class='col-md-4'>
+                <h2 id='account-name-display'></h2>
                 <h3>Deposit or withdraw money: </h3>
                 <form id = "dw">
                     <input type="number" placeholder="Deposit amount">
                     <input type="number" placeholder="Withdraw amount">
 
                     <button type="submit" class='btn btn-success'> Submit </button>
-                </div>
                 </form>
-
+            </div>
 
             <div id="show-balance" class ='col-md-4'>
-                <form id="total">
                 <h3> Your bank account's balance: </h3>
                 <h1 id='balance'></h1>
             </div>
-            </form>
-
-
-
-
-
-
-
-
-
-
-
-
+        </div>
 
         </div>
     </body>
