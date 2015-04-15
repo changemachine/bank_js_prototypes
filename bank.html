@@ -16,12 +16,18 @@
                     <input type="text" placeholder="name" pattern='.{4,20}' required>
                     <input type="number" placeholder="deposit" required>
 
-                <button type="submit" class='btn btn-success' name="Button"> Submit</button>
+                <button type="submit" class='btn btn-success'> Submit</button>
                 </form>
             </div>
 
-            <div id="deposit-withdraw">
+            <div id="deposit-withdraw" class='col-md-4'>
+                <h3>Deposit or withdraw money: </h3>
+                <form id = "dw">
+                    <input type="number" placeholder="Deposit amount">
+                    <input type="number" placeholder="Withdraw amount">
 
+                    <button type="submit" class='btn btn-success'> Submit </button>
+                </form>
             </div>
 
             <div id="show-balance">
