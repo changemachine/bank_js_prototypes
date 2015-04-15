@@ -1,7 +1,8 @@
-//prototype at the beginning, along with its properties and methods
+//prototype always at the top of the page; global
     var BankAccount = {
         balance: 0,
         accountName: '',
+        //add the NaN method to have inputs made on one or the other
         withdraw: function(amount) {
             if(isNaN(amount)) {
                 amount = 0;
@@ -16,15 +17,16 @@
         }
     };
 
+    //global variable, will need it on both forms
     var myAccount;
 
 $(document).ready(function() {
 
-    //requires the form under this 'document', allows the document see whats going on
+    //allows the document see whats going on beginning with the first submit form
     $("form#sign-up").submit(function(event) {
         event.preventDefault();
         // <----- this is the add name and amount box ----->
-        //create new variables and save the input values in relation to the properties in the object
+        //create new variables and save the input values from the prototype
         var inputName = $("input#account-name").val();
         var inputBal = parseInt($("input#account-bal").val());
         //passing the prototype into the object to assign new values  to the properties
@@ -40,7 +42,7 @@ $(document).ready(function() {
         //hides the new - account after entering the name and amount.
         $("#new-account").hide();
 
-        console.log(myAccount.balance);
+
 
     });
         // <----- this is the add deposit or withdraw ----->
@@ -50,8 +52,7 @@ $(document).ready(function() {
             var inputWithdrawString = $("input#withdraw").val();
             var inputDeposit = parseInt(inputDepositString);
             var inputWithdraw = parseInt(inputWithdrawString);
-            console.log(inputDeposit);
-            console.log(inputWithdraw);
+
             if (inputDeposit >0 && inputWithdraw > 0) {
                 alert("Only 1 field at a time, please!")
             }
@@ -60,11 +61,8 @@ $(document).ready(function() {
                 myAccount.withdraw(inputWithdraw);
             }
 
-
-
             $("#balance").text(myAccount.balance);
 
         });
-// debugger;
 
 });
