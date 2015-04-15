@@ -1,10 +1,15 @@
-$(document).ready(function() {
+var BankAccount = {
+    balance: 0,
 
-$("form#YADAYADA").submit(function(event){
+    withdraw: function(amount) {
+        this.balance = this.balance - amount;
+    },
+    deposit: function(amount) {
+        this.balance = this.balance + amount;
+    }
+};
 
-    event.preventDefault();
-});
-
-
-
-});
+    // var myBankAccount = Object.create(BankAccount);
+    // myBankAccount.balance;
+    // myBankAccount.deposit(20);
+    // myBankAccount.balance;
