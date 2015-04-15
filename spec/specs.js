@@ -6,6 +6,13 @@ describe("BankAccount", function() {
             expect(testBankAccount.balance).to.equal(10);
         });
     });
-    
+
+    describe("withdraw", function() {
+        it("subtracts the entered amount from balance", function() {
+            var testBankAccount = Object.create(BankAccount);
+            testBankAccount.withdraw(10);
+            expect(testBankAccount.balance).to.equal(-10);
+        });
+    });
 
 });
