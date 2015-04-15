@@ -22,10 +22,14 @@ $(document).ready(function() {
         myAccount.balance = inputBal;
         myAccount.accountName = inputName;
 
-        //shows the name input
-        $('#account-name-display').text(this.accountName);
+        //shows the name input 'myAccount.accountName', instead of 'this' due to being outside the object
+        $('#account-name-display').text(myAccount.accountName);
+        $('#balance').text(myAccount.balance);
         //hides the the deposit-withdraw and balance
         $("#account-hide").show();
+
+        $("#new-account").hide();
+
 
 
     });
