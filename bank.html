@@ -10,7 +10,11 @@
         <div class='container'>
 
             <h1>James-Erica Supernatural Credit Union</h1>
-            <div id="new-account" class='col-md-4'>
+            <div class='col-sm-4'>
+                <img src="http://images.fineartamerica.com/images-medium-5/benjamin-franklin-art.jpg" style="width:128px">
+
+            </div>
+            <div id="new-account" class='col-sm-8'>
                 <form id="sign-up">
                     <h3> Sign up for a bank account:</h3>
                     <input id='account-name' type="text" placeholder="name" pattern='.{4,20}' required>
@@ -23,7 +27,7 @@
         <div id="account-hide">
             <div id="deposit-withdraw" class='col-md-4'>
                 <h2 id='account-name-display'></h2>
-                <h3>Deposit or withdraw money: </h3>
+                <h3>Deposit or Withdraw </h3>
                 <form id="cha-ching">
                     <input id="deposit" type="number" placeholder="Deposit amount">
                     <input id="withdraw"  type="number" placeholder="Withdraw amount">
@@ -33,8 +37,8 @@
             </div>
 
             <div id="show-balance" class ='col-md-4'>
-                <h3> Your bank account's balance: </h3>
-                <h1 id='balance'></h1>
+                <h3> Your balance: </h3>
+                <h1>$<span  id='balance'></span></h1>
             </div>
         </div>
 
